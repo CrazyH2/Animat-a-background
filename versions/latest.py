@@ -27,6 +27,8 @@ require("pynput")
 
 import pathlib, os
 from pynput import keyboard
+
+import tkinter as Tk
 from tkinter import *
 import tkinter.messagebox as messagebox
 import tkinter.filedialog as filedialog
