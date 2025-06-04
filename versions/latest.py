@@ -79,7 +79,8 @@ Made by CrazyH2 (https://github.com/crazyh2)
 
         messagebox.showwarning("Animat-a-background", r"""Use https://motionbgs.com for finding live wallpapers.
 Then use https://ezgif.com/video-to-png for converting the video to png frames.
-                                
+
+Licensed under CC BY-NC-ND 4.0
 Made by CrazyH2 (https://github.com/crazyh2)
 © Copyright 2025 CrazyH2. All rights reserved.""")
 
