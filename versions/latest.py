@@ -92,13 +92,13 @@ Made by CrazyH2 (https://github.com/crazyh2)
         self.renderer = self.render()
 
     def chooseFPS(self):
-        chosenFPS = simpledialog.askinteger("Choose an FPS     Animat-a-background - CrazyH2 (github.com/crazyh2)", "Enter an FPS:", parent = self.root)
+        chosenFPS = simpledialog.askinteger("Animat-a-background", "Enter an FPS:", parent = self.root)
         if chosenFPS == None:
             exit()
         return chosenFPS
 
     def chooseFile(self):
-        filename = filedialog.askdirectory(initialdir="/", title="Select A Wallpaper     Animat-a-background - CrazyH2 (github.com/crazyh2)")
+        filename = filedialog.askdirectory(initialdir="/", title="Select A Wallpaper  |  Animat-a-background - CrazyH2 (github.com/crazyh2)")
         if filename == False:
             exit()
         return filename
@@ -149,7 +149,7 @@ Made by CrazyH2 (https://github.com/crazyh2)
 
         mainself = self
 
-    def on_activate_w(idk):
+    def on_activate_w(self):
         print("Detected w hotkey")
         agreed = messagebox.askokcancel("Animat-a-background", """Are you sure you want to remove the animated wallpaper?
 
@@ -157,7 +157,7 @@ Licensed under CC BY-NC-ND 4.0
 Made by CrazyH2 (https://github.com/crazyh2)
 © Copyright 2025 CrazyH2. All rights reserved.""")
         if agreed == True:
-            mainself.root.destroy
+            self.root.quit()
             os._exit(0)                                
 
 if __name__ == "__main__":
