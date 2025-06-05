@@ -95,6 +95,22 @@ Made by CrazyH2 (https://github.com/crazyh2)
         chosenFPS = simpledialog.askinteger("Animat-a-background", "Enter an FPS:", parent = self.root)
         if chosenFPS == None:
             exit()
+        elif chosenFPS > 120:
+            messagebox.showwarning("Animat-a-background", r"""The FPS you specified was too large.
+The maximum FPS allowed is 120.
+
+Licensed under CC BY-NC-ND 4.0
+Made by CrazyH2 (https://github.com/crazyh2)
+© Copyright 2025 CrazyH2. All rights reserved.""")
+            exit()
+        elif chosenFPS < 5:
+            messagebox.showwarning("Animat-a-background", r"""The FPS you specified was too small.
+The minimum FPS allowed is 5.
+
+Licensed under CC BY-NC-ND 4.0
+Made by CrazyH2 (https://github.com/crazyh2)
+© Copyright 2025 CrazyH2. All rights reserved.""")
+            exit()
         return chosenFPS
 
     def chooseFile(self):
