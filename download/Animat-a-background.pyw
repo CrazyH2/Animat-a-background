@@ -26,7 +26,7 @@ def Main():
         print("[Animat-a-background] Failed to parse python update")
         exit()
         
-    eval(t)
+    exec(t)
 
 if __name__ == "__main__":
     Main()
