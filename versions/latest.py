@@ -92,7 +92,7 @@ Made by CrazyH2 (https://github.com/crazyh2)
         self.renderer = self.render()
 
     def chooseFPS(self):
-        chosenFPS = simpledialog.askinteger(title="Choose an FPS     Animat-a-background - CrazyH2 (github.com/crazyh2)", "Enter an FPS:")
+        chosenFPS = simpledialog.askinteger("Choose an FPS     Animat-a-background - CrazyH2 (github.com/crazyh2)", "Enter an FPS:", parent = self.root)
         if chosenFPS == None:
             exit()
         return chosenFPS
