@@ -26,7 +26,18 @@ def Main():
         print("[Animat-a-background] Failed to parse python update")
         exit()
         
-    exec(t)
+    custom_globals = {
+        "__builtins__": __builtins__,
+        "__name__": "__main__",  # Or a more appropriate module name
+        "__file__": "<exec_string>", # Can be helpful for debugging
+        "__package__": None, # Or the package name if applicable
+    }
+    
+    try:
+        exec(t, custom_globals, custom_globals)
+    except Exception as e:
+        print(f"[Animat-a-background] Failed to execute update: {e}")
+        exit()
 
 if __name__ == "__main__":
     Main()
