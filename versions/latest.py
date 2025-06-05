@@ -32,10 +32,11 @@ import tkinter as Tk
 from tkinter import *
 import tkinter.messagebox as messagebox
 import tkinter.filedialog as filedialog
+import tkinter.simpledialog as simpledialog
 
 class Main:
     def __init__(self):
-        self.fps = 20
+        self.fps = 30
         self.current_image_index = 0
         self.bottomText = '''Animat-a-background
 An animated wallpaper engine.
@@ -85,8 +86,16 @@ Made by CrazyH2 (https://github.com/crazyh2)
 © Copyright 2025 CrazyH2. All rights reserved.""")
 
         self.backgroundPath = self.chooseFile()
+        self.fps = self.chooseFPS()
+
         self.backgroundFrames = self.load_images()
-        self.renderer = self.render()
+        self.renderer = self.render()simpledialog.askinteger(title, prompt, **kw)
+
+    def chooseFPS(self):
+        chosenFPS = simpledialog.askinteger(title="Choose an FPS     Animat-a-background - CrazyH2 (github.com/crazyh2)", "Enter an FPS:")
+        if chosenFPS == None:
+            exit()
+        return chosenFPS
 
     def chooseFile(self):
         filename = filedialog.askdirectory(initialdir="/", title="Select A Wallpaper     Animat-a-background - CrazyH2 (github.com/crazyh2)")
