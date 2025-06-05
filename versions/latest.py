@@ -48,7 +48,7 @@ Made by CrazyH2 (https://github.com/crazyh2)
 
         self.root = Tk()
         self.root.title('Animat-a-background - CrazyH2 (github.com/crazyh2)')
-        self.root.iconbitmap(os.path.join(pathlib.Path(__file__).parent, './favicon.ico'))
+        self.root.iconbitmap(os.path.join(os.path.dirname(os.path.realpath(__file__)), './favicon.ico'))
         self.root.withdraw()
 
         self.screenWidth, self.screenHeight = self.root.winfo_screenwidth(), self.root.winfo_screenheight()
