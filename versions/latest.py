@@ -138,6 +138,7 @@ Made by CrazyH2 (https://github.com/crazyh2)
 
         self.root.lower()
         self.root.after(10, self.update_image)
+        self.update_image()
         self.root.mainloop()
 
     def load_images(self):
