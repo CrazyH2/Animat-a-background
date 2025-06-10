@@ -115,7 +115,7 @@ Made by CrazyH2 (https://github.com/crazyh2)
 
     def chooseFile(self):
         filename = filedialog.askdirectory(initialdir="/", title="Select A Wallpaper  |  Animat-a-background - CrazyH2 (github.com/crazyh2)")
-        if filename == False:
+        if filename == False or filename == "":
             exit()
         return filename
 
