@@ -162,7 +162,7 @@ Made by CrazyH2 (https://github.com/crazyh2)
 
         self.current_image_index = (self.current_image_index + 1) % len(self.backgroundFrames)
 
-        self.root.after(int(1000 / self.fps), self.update_image)
+        self.root.after(1000 * int(1 / self.fps), self.update_image)
 
         mainself = self
 
